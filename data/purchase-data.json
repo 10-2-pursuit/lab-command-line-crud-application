@@ -1,0 +1,20 @@
+[
+    {
+    "name":"coffee",
+    "id":"WBzm",
+    "price":2.50, 
+    "doanation":0.50
+    },
+    {
+    "name":"donut",
+    "id":"h6BQ",
+    "price":1.75,
+    "doanation":0.50
+    },
+    {
+    "name":"ice coffee",
+    "id":"H8jT",
+    "price":3.00, 
+    "doanation":0.75
+    }
+]

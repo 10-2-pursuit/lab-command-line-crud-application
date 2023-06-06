@@ -68,7 +68,7 @@ function score (animals) {
     // iterates over the array and combines the points of each animal
     const total = animals.reduce((a,b) => (a + b.points), 0)
     // returns that number
-    return total
+    return +total
 }
 
 module.exports = {
