@@ -55,7 +55,7 @@ function update (purchases, purchaseId, updatedPurchase ) {
        // update the name of the animal at the index we found
        purchases[index].name = purchaseAnimal;
        // update the price of the animal at the index we found
-       purchases[index].donation = purchasePrice[updatedPurchase];
+       purchases[index].price = purchasePrice[updatedPurchase];
        // update the points of the animal at the index we found
         // by accessing our `animalPoints` data at the key of our updatedAnimal from the user
         purchases[index].donation = purchaseDonation[updatedPurchase];
