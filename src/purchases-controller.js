@@ -41,7 +41,7 @@ function destroy (purchases, purchaseId) {
     // returns the updated array
     return purchases
    } else {
-    console.log("couldnt find a purchase with that id")
+    console.log("couldn't find a purchase with that id")
    }
 }
 // accepts all of our animals from our data and an ID from the user and a new name for the animal to update
@@ -63,7 +63,7 @@ function update (purchases, purchaseId, updatedPurchase ) {
        // return the modified array
        return purchases
    } else {
-     console.log("couldnt find a purchase with that id")
+     console.log("couldn't find a purchase with that id")
     }
    
 }
