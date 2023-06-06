@@ -1,7 +1,7 @@
 // this file will organize all the logic that interacts with our animals data
 const { nanoid } = require("nanoid");
 const purchaseDonation = require("../data/purchases-donations.json")
-const purchasePrice = require("../data/purchases-donations.json")
+const purchasePrice = require("../data/purchases-price.json")
 const inform = console.log
 // this is where we will create our CRUD logic
 
@@ -27,7 +27,7 @@ function show (purchases, purchaseId) {
     // finds the matching animal
     const foundPurchase = purchases.find((purchase) => purchase.id === purchaseId) ;
     // reutrns a formattes string
-    return foundPurchase.id + " " + foundPurchase.name + " " + foundPurchase.price + " " + foundPurchase.donation + " donation"
+    return foundPurchase.id + " " + foundPurchase.name + " price " + foundPurchase.price + " donation: " + foundPurchase.donation
 }
 // accepts all of our animals from our data and an ID from the user
 function destroy (purchases, purchaseId) {
