@@ -27,7 +27,7 @@ function show (purchases, purchaseId) {
     // finds the matching animal
     const foundPurchase = purchases.find((purchase) => purchase.id === purchaseId) ;
     // reutrns a formattes string
-    return foundPurchase.id + " " + foundPurchase.name + " price " + foundPurchase.price + " donation: " + foundPurchase.donation
+    return foundPurchase.id + " " + foundPurchase.name + " price: " + foundPurchase.price + " donation: " + foundPurchase.donation
 }
 // accepts all of our animals from our data and an ID from the user
 function destroy (purchases, purchaseId) {
@@ -36,7 +36,7 @@ function destroy (purchases, purchaseId) {
     // if a match is found
    if (index > -1) {
     // removes it from the array if it is fond
-    animals.splice(index, 1);
+    purchases.splice(index, 1);
     console.log("we deleted your purchase");
     // returns the updated array
     return purchases
@@ -53,7 +53,7 @@ function update (purchases, purchaseId, updatedPurchase ) {
         // update the id of the animal at the index we found
         purchases[index].id = purchaseId;
        // update the name of the animal at the index we found
-       purchases[index].name = purchaseAnimal;
+       purchases[index].name = updatedPurchase;
        // update the price of the animal at the index we found
        purchases[index].price = purchasePrice[updatedPurchase];
        // update the points of the animal at the index we found
