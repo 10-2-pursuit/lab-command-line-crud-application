@@ -3,12 +3,14 @@ const { faker} = require("@faker-js/faker");
 const _ = require("lodash");
 // const { planeList } = require("../data/planelist")
 
+const destinations = ['New York', 'London', 'Tokyo', 'Sydney'];
+
 function createRandomPlanes() {
     const plane = {
         id: nanoid(4),
-        PlanesDestination: faker.location.city(),
+        planesDestination: faker.location.city(destinations),
         isDelayed: faker.datatype.boolean(),
-        PlanesArrivalInHours: faker.number.int({min: 1, max: 24})
+        planesArrivalInHours: faker.number.int({min: 1, max: 15})
     }
     return plane;
 }

@@ -1,4 +1,4 @@
-const { createRandomPlanes, planeArrivalLocation } = require("../src/plane-generator")
+const { createRandomPlanes, planeHandler } = require("../src/plane-generator")
 
 describe('createRandomPlanes', () => {
     test('Should create an object with id, planeDestination, isDelayed, trainArrivalInMins.', () => {

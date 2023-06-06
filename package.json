@@ -5,12 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "index": "node index.js index",
     "create": "node index.js create",
     "show": "node index.js show",
     "update": "node index.js update",
-    "destroy": "node index.js destroy",
-    "delay": "node index.js score"
+    "destroy": "node index.js destroy"
   },
   "keywords": [],
   "author": "",
