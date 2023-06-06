@@ -1,11 +1,13 @@
 const { readJSON, writeJSON } = require("./src/fs.js");
 const { createArrF } = require("./src/gen.js");
 const { basicView } = require("./src/basicView.js");
-const { total, totalDonation, totalPurchase } = require("./src/total.js");
+const { totalDonation, totalPurchase } = require("./src/total.js");
 const { detailView } = require("./src/detailView.js");
-const data = require('./data/data.json');
 const { deleteByName } = require("./src/delete.js");
 const { updateData } = require("./src/update.js");
+const { create } = require("./src/create.js");
+const data = require('./data/data.json');
+
 function run(){
     const argc = process.argv.length;
 
@@ -31,11 +33,21 @@ function run(){
             writeJSON(`./data`, 'data.json', temp);
             break;
         case "help":
+            console.log("faker (number | null) : will generate [number] amount fake data");
+            console.log("donation : will show total amount for donation");
+            console.log("detail : log all the data");
+            console.log("delete (id) : erase [id] and its data");
+            console.log("update (id) '(property)=(update value)' : will update (property) in the (id)");
+            console.log("create (property1)=(value) ... (property3)=(value) : create new data, YOU MUST FILL name/amount/donation ");
+            break;
+        case "create":
+            writeJSON(`./data`, 'data.json', create(data,process.argv[3],process.argv[4],process.argv[5]));
             break;
         default:
             console.log(basicView());
             
     }
+
     return 0;
 }
 

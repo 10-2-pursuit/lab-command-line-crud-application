@@ -3,7 +3,7 @@ const { nanoid } = require("nanoid");
 
 function createObj(){
     const jsonObj = {
-        id: nanoid(),
+        id: nanoid(5),
         name: faker.person.fullName(),
         amount: faker.number.float({min: 1, max: 1000000, precision: 0.01}),
         donation: faker.number.float({min: 1, max: 1000000, precision: 0.01}),
