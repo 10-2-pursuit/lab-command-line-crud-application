@@ -1,6 +1,7 @@
 // this file will organize all the logic that interacts with our animals data
 const { nanoid } = require("nanoid");
 const purchaseDonation = require("../data/purchases-donations.json")
+const purchasePrice = require("../data/purchases-donations.json")
 const inform = console.log
 // this is where we will create our CRUD logic
 
@@ -9,6 +10,7 @@ function create (purchases, purchaseName) {
     const purchase = { name: purchaseName, 
         // nanoid gives us a uniqe id for our animals
         id: nanoid(4),
+        price: purchasePrice[purchaseName],
         donation: purchaseDonation[purchaseName]
     };
     // adds to our animals array
@@ -39,7 +41,7 @@ function destroy (purchases, purchaseId) {
     // returns the updated array
     return purchases
    } else {
-    console.log("couldnt find an purchase with that id")
+    console.log("couldnt find a purchase with that id")
    }
 }
 // accepts all of our animals from our data and an ID from the user and a new name for the animal to update
@@ -52,6 +54,8 @@ function update (purchases, purchaseId, updatedPurchase ) {
         purchases[index].id = purchaseId;
        // update the name of the animal at the index we found
        purchases[index].name = purchaseAnimal;
+       // update the price of the animal at the index we found
+       purchases[index].donation = purchasePrice[updatedPurchase];
        // update the points of the animal at the index we found
         // by accessing our `animalPoints` data at the key of our updatedAnimal from the user
         purchases[index].donation = purchaseDonation[updatedPurchase];
@@ -59,13 +63,13 @@ function update (purchases, purchaseId, updatedPurchase ) {
        // return the modified array
        return purchases
    } else {
-     console.log("couldnt find an purchase with that id")
+     console.log("couldnt find a purchase with that id")
     }
    
 }
 // accepts all of our animals data as an array
 function score (purchases) {
-    // iterates over the array and combines the points of each animal
+    // iterates over the array and combines the donations of each animal
     const total = purchases.reduce((a,b) => (a + b.donation), 0)
     // returns that number
     return total

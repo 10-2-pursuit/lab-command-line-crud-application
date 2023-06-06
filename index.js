@@ -65,7 +65,7 @@ const run = () => {
         if (writeToFile) {
             console.log("new data detected - updating")
             // here we pass our `updatedPurchases` to our writeJSONFile to record out new entries
-            writeJSONFile("./data", "animals-data.json", updatedPurchases)
+            writeJSONFile("./data", "purchases-data.json", updatedPurchases)
         }
     
     }
