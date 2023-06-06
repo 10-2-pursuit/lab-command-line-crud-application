@@ -19,7 +19,7 @@ const run = () => {
         const purchase = process.argv[3];
         // in order to get the state of our data we need to invoke our readJSONFile helper
             // we save this in the variable `animals`
-        let purchases = readJSONFile("./data", "animals-data.json")
+        let purchases = readJSONFile("./data", "purchases-data.json")
         // we will use this variable later 
             // to determine wether or not we need to record new information to the data file
         let writeToFile = false;

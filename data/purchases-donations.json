@@ -1,0 +1,20 @@
+[
+  { "name": "Electronic Plastic Pants", "price": 67.38, "donation": 11.83 },
+  { "name": "Refined Fresh Chips", "price": 659.43, "donation": 81.73 },
+  { "name": "Oriental Granite Ball", "price": 159.93, "donation": 44.72 },
+  { "name": "Electronic Granite Tuna", "price": 248.85, "donation": 89.96 },
+  { "name": "Refined Rubber Ball", "price": 239.74, "donation": 88.38 },
+  { "name": "Rustic Fresh Ball", "price": 691.85, "donation": 24.28 },
+  { "name": "Electronic Plastic Shirt", "price": 471.34, "donation": 27.59 },
+  { "name": "Awesome Fresh Ball", "price": 619.94, "donation": 45.28 },
+  { "name": "Modern Wooden Bike", "price": 957.17, "donation": 95.83 },
+  { "name": "Licensed Rubber Car", "price": 557.25, "donation": 69.28 },
+  { "name": "Awesome Soft Bacon", "price": 492.84, "donation": 45.48 },
+  { "name": "Oriental Metal Chips", "price": 376.65, "donation": 12.83 },
+  { "name": "Unbranded Cotton Gloves", "price": 970.35, "donation": 57.46 },
+  { "name": "Tasty Steel Mouse", "price": 181.38, "donation": 72.52 },
+  { "name": "Generic Rubber Sausages", "price": 682.23, "donation": 46.66 },
+  { "name": "Luxurious Frozen Towels", "price": 179.63, "donation": 63.37 },
+  { "name": "Incredible Steel Towels", "price": 699.28, "donation": 68.65 },
+  { "name": "Handmade Cotton Cheese", "price": 471.89, "donation": 36.46 }
+]
