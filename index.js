@@ -8,6 +8,13 @@ const { updateData } = require("./src/update.js");
 const { create } = require("./src/create.js");
 const data = require('./data/data.json');
 
+/**
+ * run()
+ * -------------------------
+ * main function to handle argv & other supportive functions.
+ * 
+ * @returns {number} - if it ends successfully, return 0
+ */
 function run(){
     const argc = process.argv.length;
 

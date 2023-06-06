@@ -2,6 +2,15 @@ const { nanoid } = require("nanoid");
 const d = require("../data/data.json");
 const _ = require("lodash");
 
+/**
+ * create()
+ * -----------------------------------
+ * create new data to the json file
+ * 
+ * @param {object[]} data - JSON file, 
+ * @param  {...string} inputStream - input string with "[property]=[value]" format
+ * @returns {object[]} - it will be used to write our data.
+ */
 function create(data = d, ...inputStream){
     console.log(inputStream)
     const prop = ['id','name','amount','donation'];
@@ -10,15 +19,9 @@ function create(data = d, ...inputStream){
         return data;
     }
 
-
-
     let field1 = inputStream[0].split("=");
     let field2 = inputStream[1].split("=");
     let field3 = inputStream[2].split("=");
-
-    console.log(field1);
-    console.log(field2);
-    console.log(field3);
 
     const newObj = {
         id: nanoid(4),
