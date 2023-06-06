@@ -1,0 +1,51 @@
+[
+  {
+    "id": "k-eL",
+    "planesDestination": "O'Haramouth",
+    "isDelayed": true,
+    "PlanesArrivalInHours": 7
+  },
+  {
+    "id": "I3TO",
+    "planesDestination": "Spencerhaven",
+    "isDelayed": true,
+    "PlanesArrivalInHours": 8
+  },
+  {
+    "id": "r8E3",
+    "planesDestination": "Shainaworth",
+    "isDelayed": true,
+    "PlanesArrivalInHours": 10
+  },
+  {
+    "id": "lzWv",
+    "planesDestination": "Scranton",
+    "isDelayed": true,
+    "PlanesArrivalInHours": 5
+  },
+  {
+    "id": "QGUl",
+    "planesDestination": "North Mathias",
+    "isDelayed": false,
+    "PlanesArrivalInHours": 8
+  },
+  {
+    "id": "IRH8",
+    "planesDestination": "Reading",
+    "isDelayed": false,
+    "PlanesArrivalInHours": 1
+  },
+  {
+    "id": "fHFq",
+    "planesDestination": "Dorisboro",
+    "isDelayed": false,
+    "PlanesArrivalInHours": 9
+  },
+  {
+    "id": "tHyj",
+    "planesDestination": "New York",
+    "isDelayed": "true",
+    "PlanesArrivalInHours": 13,
+    "planesArrivalInHours": "14"
+  }
+]
