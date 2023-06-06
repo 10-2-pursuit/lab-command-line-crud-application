@@ -1,7 +1,6 @@
 const { nanoid } = require("nanoid");
 const { faker} = require("@faker-js/faker");
 const _ = require("lodash");
-// const { planeList } = require("../data/planelist")
 
 const destinations = ['New York', 'London', 'Tokyo', 'Sydney'];
 
