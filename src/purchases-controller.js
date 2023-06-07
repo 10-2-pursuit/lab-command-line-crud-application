@@ -1,8 +1,8 @@
 // this file will organize all the logic that interacts with our animals data
 const { nanoid } = require("nanoid");
 const purchaseDonation = require("../data/purchases-donations.json")
-const purchasePrice = require("../data/purchases-price.json")
-const inform = console.log
+const purchasePrice = require("../data/purchases-price.json");
+const chalk = require("chalk");
 
 
 
@@ -19,14 +19,14 @@ function create (purchases, purchaseName) {
 }
  
 function index (purchases) {
-    return purchases.map((purchase) => purchase.id + " " + purchase.name).join("\n")
+    return purchases.map((purchase) => chalk.blue(purchase.id) + " " + chalk.redBright(purchase.name)).join("\n");
 }
 
 function show (purchases, purchaseId) {
     
     const foundPurchase = purchases.find((purchase) => purchase.id === purchaseId) ;
     
-    return foundPurchase.id + " " + foundPurchase.name + " price: " + foundPurchase.price + " donation: " + foundPurchase.donation
+    return chalk.blueBright(foundPurchase.id) + " " + chalk.redBright(foundPurchase.name) + " price: " + chalk.greenBright(foundPurchase.price) + " donation: " + chalk.gray(foundPurchase.donation)
 }
 
 function destroy (purchases, purchaseId) {
