@@ -31,18 +31,21 @@ function showDetailedPurchases(data){
             chalk.green("amount"),chalk.white(element.amount),
             chalk.green("donation"),chalk.yellow(element.donation))
     }
+    return data
 }
 
-function updatePurchase(data){
+function updatePurchase(data, inputObj){
+    let newArr = inputObj || []
     let held = data.map(item => {
         return item.id
     })
 
-    let newArr = process.argv.slice(3).map(x => {
-        return x.split("=")
-    })
-
-    newArr = Object.fromEntries(newArr)
+    if(!inputObj){
+        newArr = process.argv.slice(3).map(x => {
+            return x.split("=")
+        })
+        newArr = Object.fromEntries(newArr)
+    }
 
     let foundIndex = held.indexOf(newArr.id)
 
@@ -62,16 +65,24 @@ function updatePurchase(data){
     return data
 }
 
-function deletePurchase(data){
+function deletePurchase(data, id){
     let held = data.map(item => {
         return item.id
     })
-    let foundIndex = held.indexOf(process.argv[3])
+    let foundIndex
 
-    if (foundIndex != -1){
-        console.log(`Deleted item with ID of ${chalk.blue(process.argv[3])}`)
+    if(id){
+        foundIndex = held.indexOf(id)
     } else {
-        console.log(`Item with ID of ${chalk.blue(process.argv[3])} ${chalk.red('not found')}.`)
+        foundIndex = held.indexOf(process.argv[3])
+    }
+    console.log(id)
+    
+    
+    if (foundIndex != -1){
+        console.log(`Deleted item with ID of ${chalk.blue(id)}`)
+    } else {
+        console.log(`Item with ID of ${chalk.blue(id)} ${chalk.red('not found')}.`)
     }
     return data.toSpliced(foundIndex,1)
 }

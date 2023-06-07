@@ -3,13 +3,13 @@ const purchases = [
         id: 'first',
         name: 'coffee',
         amount: 2,
-        donation: 0.14
+        donation: 0.15
     },
     {
         id: 'second',
         name: 'green tea',
         amount: 1,
-        donation: 0.12
+        donation: 0.25
     },
     {
         id: 'third',
