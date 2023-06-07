@@ -51,7 +51,8 @@ function updatePurchase(data){
         data[foundIndex] = {
             id : data[foundIndex].id,
             name : newArr.name || data[foundIndex].name,
-            amount: newArr.amount || data[foundIndex].amount
+            amount: Number(newArr.amount) || data[foundIndex].amount,
+            donation: Number(newArr.donation) || data[foundIndex].donation
         }
         console.log("Overwrote data with id of",chalk.italic(newArr.id))
     } else {
@@ -69,6 +70,8 @@ function deletePurchase(data){
 
     if (foundIndex != -1){
         console.log(`Deleted item with ID of ${chalk.blue(process.argv[3])}`)
+    } else {
+        console.log(`Item with ID of ${chalk.blue(process.argv[3])} ${chalk.red('not found')}.`)
     }
     return data.toSpliced(foundIndex,1)
 }
@@ -92,13 +95,13 @@ function run(){
             console.log(showDetailedPurchases(purchases))
             break;
         case "update":
-            updatePurchase(purchases)
+            console.log(updatePurchase(purchases))
             break;
         case "delete":
             deletePurchase(purchases)
             break;
         case "showDonations":
-            console.log(showDonationTotal(purchases))
+            console.log(`Total donations is ${chalk.bgCyan(showDonationTotal(purchases))}`)
             break;
     }   
 }
