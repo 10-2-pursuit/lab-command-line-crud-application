@@ -43,7 +43,8 @@ function updatePurchase(data){
     })
 
     newArr = Object.fromEntries(newArr)
-    foundIndex = held.indexOf(newArr.id)
+
+    let foundIndex = held.indexOf(newArr.id)
 
     if(newArr.id && foundIndex != -1) {
         //Overwrite relevant data, defaults to previous if not found
@@ -60,9 +61,23 @@ function updatePurchase(data){
     return data
 }
 
-function deletePurchase(){}
+function deletePurchase(data){
+    let held = data.map(item => {
+        return item.id
+    })
+    let foundIndex = held.indexOf(process.argv[3])
 
-function showDonationTotal(){}
+    if (foundIndex != -1){
+        console.log(`Deleted item with ID of ${chalk.blue(process.argv[3])}`)
+    }
+    return data.toSpliced(foundIndex,1)
+}
+
+function showDonationTotal(data){
+    return data.map(x => {
+        return x.donation
+    })
+}
 
 function run(){
     switch(process.argv[2]){
@@ -80,8 +95,12 @@ function run(){
             updatePurchase(purchases)
             // console.log("update")
             break;
-        case "destroy":
-            console.log("delete")
+        case "delete":
+            deletePurchase(purchases)
+            // console.log("delete")
+            break;
+        case "showDonations":
+            console.log()
             break;
     }   
 }

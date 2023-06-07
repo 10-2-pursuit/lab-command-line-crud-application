@@ -14,7 +14,8 @@
     "show": "node index.js show",
     "details": "node index.js details",
     "update": "node index.js update",
-    "destroy": "node index.js destroy"
+    "delete": "node index.js delete",
+    "showDonations": "node index.js showDonations"
   },
   "author": "Nugget-Meister",
   "license": "ISC"
