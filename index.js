@@ -26,10 +26,10 @@ function showPurchases(data) {
 function showDetailedPurchases(data){
     for(element of data) {
         console.log(
-            chalk.blue("id"),chalk.white(element.id),
-            chalk.blue("name"),chalk.white(element.name),
-            chalk.blue("amount"),chalk.white(element.amount),
-            chalk.blue("donation"),chalk.yellow(element.donation))
+            chalk.green("id"),chalk.white(element.id),
+            chalk.green("name"),chalk.white(element.name),
+            chalk.green("amount"),chalk.white(element.amount),
+            chalk.green("donation"),chalk.yellow(element.donation))
     }
 }
 
@@ -103,11 +103,18 @@ function run(){
         case "showDonations":
             console.log(`Total donations is ${chalk.bgCyan(showDonationTotal(purchases))}`)
             break;
+        default:
+            break;
     }   
 }
 
-
-// console.log(createPurchase("coffee",2,0.14))
-// console.log(showPurchases(purchases))
-
 run()
+
+module.exports = {
+    createPurchase,
+    showPurchases,
+    showDetailedPurchases,
+    updatePurchase,
+    deletePurchase,
+    showDonationTotal
+}
