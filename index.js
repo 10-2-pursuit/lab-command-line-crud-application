@@ -29,7 +29,7 @@ function showDetailedPurchases(data){
             chalk.blue("id"),chalk.white(element.id),
             chalk.blue("name"),chalk.white(element.name),
             chalk.blue("amount"),chalk.white(element.amount),
-            chalk.blue("donation"),chalk.white(element.donation))
+            chalk.blue("donation"),chalk.yellow(element.donation))
     }
 }
 
@@ -76,14 +76,14 @@ function deletePurchase(data){
 function showDonationTotal(data){
     return data.map(x => {
         return x.donation
-    })
+    }).reduce((sum, add) => sum+add,0)
 }
 
 function run(){
     switch(process.argv[2]){
         case "create":
-            createPurchase(purchases,process.argv[3],process.argv[4],process.argv[5])
-            console.log(`Created `)
+            console.log(createPurchase(purchases,process.argv[3],process.argv[4],process.argv[5]))
+            console.log(`Created an item ${process.argv[3]}`)
             break;
         case "show":
             console.log(showPurchases(purchases))
@@ -93,14 +93,12 @@ function run(){
             break;
         case "update":
             updatePurchase(purchases)
-            // console.log("update")
             break;
         case "delete":
             deletePurchase(purchases)
-            // console.log("delete")
             break;
         case "showDonations":
-            console.log()
+            console.log(showDonationTotal(purchases))
             break;
     }   
 }
