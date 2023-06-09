@@ -5,9 +5,8 @@ function create(id) {
     const customerId = {
         id: nanoid()
     };
-    id.push(customerId);
-    console.log(id)
-    return id;
+   customerId.push(id)
+   return id;
 }
 module.exports = {
     create,

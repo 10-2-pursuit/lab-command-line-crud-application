@@ -2,19 +2,19 @@ const custmers = [
     {
         id: "",
         name: "",
-        amount: "",
-        donation:""
+        amount: 1299,
+        donation: 299
     },
     {
         id: "",
         name: "",
-        amount: "",
-        donation:""
+        amount: 2099,
+        donation: 399
     },
     {
         id: "",
         name: "",
-        amount: "",
-        donation:""
+        amount: 2199,
+        donation: false
     },
 ]
