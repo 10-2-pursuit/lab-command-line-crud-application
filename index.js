@@ -6,3 +6,4 @@ function create(id) {
     console.log(id)
     return id;
 }
+module.exports ={create};
