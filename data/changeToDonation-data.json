@@ -1,0 +1,15 @@
+[
+    {
+        "id": "myh4",
+        "name": "coffee",
+        "amount": 2.04,
+        "donation": 0.96
+    },
+    {
+        "id": "ajh1",
+        "name": "muffin",
+        "amount": 1.50,
+        "donation": 0.50
+    }
+
+]
