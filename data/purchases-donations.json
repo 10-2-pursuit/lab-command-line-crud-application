@@ -1,0 +1,19 @@
+{
+   "coffee": 1.83,
+   "donut": 0.73,
+   "expresso": 1.72,
+   "macchiato": 2.96,
+   "loaf": 1.38,
+   "tea": 0.28,
+   "juice": 0.59,
+   "oatmeal": 1.28,
+   "yogurt": 2.83,
+   "bagel": 1.28,
+   "cookie": 0.48,
+   "danish": 0.83,
+   "crissant": 0.46,
+   "scone": 1.52,
+   "muffin": 2.66,
+   "americano": 3.37,
+   "cappuccino": 3.65 
+  }
