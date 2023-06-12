@@ -1,0 +1,38 @@
+
+const { readJSONFile, writeJSONFile } require ("./src/helpers")
+const {faker} = require ("@faker-js/faker")
+
+export type AircraftType = `${Aircraft}`;
+
+export interface Airline {
+  /**
+   * The name of the airline (e.g. `'American Airlines'`).
+   */
+  readonly name: string;
+  /**
+   * The 2 character IATA code of the airline (e.g. `'AA'`).
+   */
+  readonly iataCode: string;
+}
+
+export interface Airplane {
+  /**
+   * The name of the airplane (e.g. `'Airbus A321'`).
+   */
+  readonly name: string;
+  /**
+   * The IATA code of the airplane (e.g. `'321'`).
+   */
+  readonly iataTypeCode: string;
+}
+
+export interface Airport {
+  /**
+   * The name of the airport (e.g. `'Dallas Fort Worth International Airport'`).
+   */
+  readonly name: string;
+  /**
+   * The IATA code of the airport (e.g. `'DFW'`).
+   */
+  readonly iataCode: string;
+}
