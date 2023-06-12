@@ -20,7 +20,13 @@ function index(purchases) {
 function show(purchases, purchaseId) {
     const foundPurchase = purchases.find((purchase) => purchase.id === purchaseId);
 
-    return `${foundPurchase.id} ${foundPurchase.name} ${foundPurchase.amount} ${foundPurchase.donation}`;
+    return   foundPurchase.id +
+    " " +
+    foundPurchase.name +
+    " " +
+    foundPurchase.amount +
+    " " +
+    foundPurchase.donation;
 }
 
 function destroy(purchases, purchaseId) {

@@ -15,9 +15,9 @@ const {
 
     describe("this will test show", () => {
         it("should check if value input to function is a already in the data, if it is return error message", ()=> {
-            const input = "4DW3";
+            const input = "Pu2Z";
             const actual = show(inventory,input);
-            const expected = "4DW3 HELLOET";
+            const expected = "Pu2Z Dog 776.00 2.00";
             expect(actual).toEqual(expected);
         });
     });
