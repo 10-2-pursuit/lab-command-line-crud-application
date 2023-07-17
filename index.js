@@ -1,5 +1,5 @@
 const {nanoid} = require("nanoid");
-const {faker} = require("@faker-js/faker");
+
 
 function create(id) {
     const customerId = {
@@ -9,6 +9,5 @@ function create(id) {
    return id;
 }
 module.exports = {
-    create,
-    faker,
+    create
 };
