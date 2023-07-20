@@ -1,0 +1,39 @@
+{
+  "name": "lab-command-line-crud-application",
+  "version": "1.0.0",
+  "description": "You will build an application that lets users round up the change for each purchase and set it as a donation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "show": "node index.js show",
+    "index": "node index.js index",
+    "destroy": "node index.js destroy",
+    "create": "node index.js create",
+    "update": "node index.js update",
+    "test": "jest",
+    "all": "npm run index && npm run show && npm run destroy && npm run create && npm run update && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeffchua96/lab-command-line-crud-application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeffchua96/lab-command-line-crud-application/issues"
+  },
+  "homepage": "https://github.com/Jeffchua96/lab-command-line-crud-application#readme",
+  "dependencies": {
+    "airport-codes": "^1.0.2",
+    "backbone": "^1.4.1",
+    "chalk": "^4.1.2",
+    "csv": "^6.3.1",
+    "express": "^4.18.2",
+    "JSONStream": "^1.3.5",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.3.6"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
+  }
+}
