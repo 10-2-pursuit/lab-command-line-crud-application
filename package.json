@@ -10,7 +10,8 @@
     "destroy": "node index.js destroy",
     "create": "node index.js create",
     "update": "node index.js update",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "all": "npm run index && npm run show && npm run destroy && npm run create && npm run update && npm run test"
   },
   "repository": {
     "type": "git",
